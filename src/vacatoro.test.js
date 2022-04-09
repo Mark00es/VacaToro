@@ -39,6 +39,11 @@ describe("Codigo Secreto", () => {
     const codVec2 = separarCodigo(4065);
     expect(buscarToro(codVec1,codVec2)).toEqual("!");
   });
+  it("si jugador A ingresa numero 1234 y el B ingresa 1530 deberia retornar !! ", () => {
+    const codVec1 = separarCodigo(1234);
+    const codVec2 = separarCodigo(1530);
+    expect(buscarToro(codVec1,codVec2)).toEqual("!!");
+  });
   /*i12561256digo secreto es 1234 y jugador B ingresa 0916 debe mostrar el simbolo de vaca (*)", () => {
     expect(buscarVaca(1234,0916)).toEqual("*");
   });*/

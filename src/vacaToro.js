@@ -10,7 +10,7 @@ function buscarToro(vec1,vec2){
     let resp="";
     for(var i = 0;i<vec1.length;i++){
         if(vec1[i]==vec2[i])
-            resp = "!";
+            resp = resp + "!";
     }
     return resp;
 }
