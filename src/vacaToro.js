@@ -1,10 +1,9 @@
-function separarCodigo(cod1){
-    let numString = String(cod1);
-    const array = []    
-    for(var i = 0;i<numString.length;i++){
-        let valInsert = +numString.charAt(i);
-        array.push(valInsert);        
+function buscarVaca(vec1,vec2){
+    let resp;
+    for(var i = 0;i<vec1.length;i++){
+        if(vec1.includes(vec2[i]))
+            resp = "*";
     }
-    return array;
+    return resp;
 }
-export default separarCodigo;
+export default buscarVaca;
