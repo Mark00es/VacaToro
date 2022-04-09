@@ -1,8 +1,6 @@
 import codigoSecreto from "./jugadorA.js"
 import recibirCodigoB from "./jugadorB.js"
 import separarCodigo from "./separador"
-//import buscarVaca from "./vacaToro"
-//import buscarToro from "./vacaToro"
 import buscarVacaToro from "./vacaToro"
 
 describe("Codigo Secreto", () => {
@@ -48,6 +46,16 @@ describe("Codigo Secreto", () => {
     const codVec1 = separarCodigo(9165);
     const codVec2 = separarCodigo(9053);
     expect(buscarVacaToro(codVec1,codVec2)).toEqual("!*");
+  });
+  it("si jugador A ingresa numero 12334  y el B ingresa 36589 deberia retornar * ", () => {
+    const codVec1 = separarCodigo(12334);
+    const codVec2 = separarCodigo(36589);
+    expect(buscarVacaToro(codVec1,codVec2)).toEqual("*");
+  });
+  it("si jugador A ingresa numero 1111  y el B ingresa 1234 deberia retornar ! ", () => {
+    const codVec1 = separarCodigo(1111);
+    const codVec2 = separarCodigo(1234);
+    expect(buscarVacaToro(codVec1,codVec2)).toEqual("!");
   });
   /*i12561256digo secreto es 1234 y jugador B ingresa 0916 debe mostrar el simbolo de vaca (*)", () => {
     expect(buscarVaca(1234,0916)).toEqual("*");
