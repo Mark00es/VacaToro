@@ -8,6 +8,9 @@ function buscarVacaToro(vec1,vec2){
                 resp = resp + "*";
         }    
     }
+    if(vec2==""){
+        resp = "ingresaste codigo vacio";
+    }
     return resp;
 }
 export default buscarVacaToro;
