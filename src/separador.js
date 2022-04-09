@@ -1,5 +1,5 @@
-function separarCodigo(cod1){
-    let numString = String(cod1);
+function separarCodigo(codigoSecreto){
+    let numString = String(codigoSecreto);
     const array = []    
     for(var i = 0;i<numString.length;i++){
         let valInsert = +numString.charAt(i);
