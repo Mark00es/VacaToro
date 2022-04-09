@@ -19,6 +19,9 @@ describe("Codigo Secreto", () => {
   it("si jugador ingresa numero 5786 este debe devolver el numero en vector [5,7,8,6]", () => {    
     expect(separarCodigo(5786)).toEqual([5,7,8,6]);
   });
+  it("si jugador ingresa numero 457896 este debe devolver el numero en vector [4,5,7,8,9,6]", () => {    
+    expect(separarCodigo(457896)).toEqual([4,5,7,8,9,6]);
+  });
   /*i12561256digo secreto es 1234 y jugador B ingresa 0916 debe mostrar el simbolo de vaca (*)", () => {
     expect(buscarVaca(1234,0916)).toEqual("*");
   });*/
