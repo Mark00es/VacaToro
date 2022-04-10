@@ -1,6 +1,7 @@
 import validarCodigo from "./jugadorA.js"
-import compararCodigo from "./vacaToro"
+//import compararCodigo from "./vacaToro"
 import separarCodigo from "./separador"
+import vacaToro from "./vacaToro"
 
 describe("Codigo Secreto", () => {
   it("Cuando jugador A ingrese un codigo secreto vacio deberia devolver codigo vacio ", () => {
@@ -22,33 +23,47 @@ describe("Codigo Secreto", () => {
     expect(separarCodigo(457896)).toEqual([4,5,7,8,9,6]);
   });
   it("si jugador A ingresa numero 3412 y el B ingresa 7604 deberia retornar * ", () => {    
-    expect(compararCodigo(3412,7604)).toEqual("*");
+    let juego = new vacaToro();
+    expect(juego.compararCodigo(3412,7604)).toEqual("*");
   });
+  
   it("si jugador A ingresa numero 9231 y el B ingresa 1708 deberia retornar ** ", () => {    
-    expect(compararCodigo(8231,1708)).toEqual("**");
+    let juego = new vacaToro();
+    expect(juego.compararCodigo(8231,1708)).toEqual("**");
   });  
-  it("si jugador A ingresa numero 8125 y el B ingresa 4065 deberia retornar ! ", () => {    
-    expect(compararCodigo(8125,4065)).toEqual("!");
+  it("si jugador A ingresa numero 8125 y el B ingresa 4065 deberia retornar ! ", () => {  
+    let juego = new vacaToro();  
+    expect(juego.compararCodigo(8125,4065)).toEqual("!");
   });
   it("si jugador A ingresa numero 1234 y el B ingresa 1530 deberia retornar !! ", () => {    
-    expect(compararCodigo(1234,1530)).toEqual("!!");
+    let juego = new vacaToro();
+    expect(juego.compararCodigo(1234,1530)).toEqual("!!");
   });
   it("si jugador A ingresa numero 9165 y el B ingresa 9053 deberia retornar !* ", () => {    
-    expect(compararCodigo(9165,9053)).toEqual("!*");
+    let juego = new vacaToro();
+    expect(juego.compararCodigo(9165,9053)).toEqual("!*");
   });
   it("si jugador A ingresa numero 12334  y el B ingresa 36589 deberia retornar * ", () => {    
-    expect(compararCodigo(12334,36589)).toEqual("*");
+    let juego = new vacaToro();
+    expect(juego.compararCodigo(12334,36589)).toEqual("*");
   });
   it("si jugador A ingresa numero 1111  y el B ingresa 1234 deberia retornar ! ", () => {    
-    expect(compararCodigo(1111,1234)).toEqual("!");
+    let juego = new vacaToro();
+    expect(juego.compararCodigo(1111,1234)).toEqual("!");
   });
   it("si jugador A ingresa numero 4723  y el B ingresa vacio deberia retornar ingresas codigo vacio ", () => {    
-    expect(compararCodigo(4721,"")).toEqual("Codigo Vacio");
+    let juego = new vacaToro();
+    expect(juego.compararCodigo(4721,"")).toEqual("Codigo Vacio");
   });  
-  it("si jugador A ingresa numero 32421  y el B ingresa 32421 deberia retornar ", () => {    
-    expect(compararCodigo(32421,32421)).toEqual("Felicidades Adivinaste El codigo");
+  it("si jugador A ingresa numero 32421  y el B ingresa 32421 deberia retornar ", () => {
+    let juego = new vacaToro();    
+    expect(juego.compararCodigo(32421,32421)).toEqual("Felicidades Adivinaste El codigo");
+  });
+  it("si jugador A ingresa numero 32421  y el B ingresa 987789 deberia retornar 'Codigo imcompatible'", () => {
+    let juego = new vacaToro();    
+    expect(juego.compararCodigo(32421,987789)).toEqual("Codigo imcompatible");
   });
   //si el codigo es 1111 y el jugador b coloca 1123
-  // Que pasa si el es codigo repetido que debe mostrar :v ?  
+  // Que pasa si el es codigo repetido que debe mostrar :v ?  */
 });
 
