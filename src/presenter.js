@@ -5,7 +5,10 @@ const codigoSecreto = document.querySelector("#codigo-secreto");
 const intent = document.querySelector("#intento");
 const form = document.querySelector("#inicio-form");
 const form2 = document.querySelector("#intento-form");
+const form3 = document.querySelector("#random-code");
 const div = document.querySelector("#resultado-div");
+const div2 = document.querySelector("#random-div");
+
 let secreto;
 let intentos;
 
@@ -23,9 +26,12 @@ form2.addEventListener("submit", (event) => {
   let resultado = juego.compararCodigo(secreto,firstNumber);
   intentos--
   if(intentos==0){
-    div.innerHTML = "<p>" + "Perdiste el juego por falta de intentos. " +" El codigo secreto era: "+ secreto +"</p>";
+    div.innerHTML = "<p>" + " Perdiste :( " + " El codigo secreto era: " + secreto + "</p>";
   }
   else{
     div.innerHTML = "<p>" + resultado + " Te quedan: " + intentos + " intentos" + "</p>";
   }
+
+
+
 });
