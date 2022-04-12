@@ -49,9 +49,9 @@ describe("Codigo Secreto Ternera", () => {
     let juego = new vacaToro();    
     expect(juego.buscarTernera1(5923,7834)).toEqual("###");
   });
-  it("si jugador A ingresa numero 5923  y el B ingresa 7834 deberia retornar ##", () => {
+  it("si jugador A ingresa numero 1234 deberia retornar %% ", () => {
     let juego = new vacaToro();    
-    expect(juego.buscarVacaToro(1234,1503)).toEqual("!##*");
+    expect(juego.buscarPrimo(1234)).toEqual("%%");
   });
   //si el codigo es 1111 y el jugador b coloca 1123
   // Que pasa si el es codigo repetido que debe mostrar :v ?  
