@@ -4,11 +4,11 @@ class vacaToro{
     }
     buscarTernera(codigoSecreto,codigoIngresado){    
         let output="";
-        for(var i = 0;i<codVec1.length;i++){
-            const codVec1 = this.separarCodigo(codigoSecreto);
-            const codVec2 = this.separarCodigo(codigoIngresado);
-            if(codVec1.includes(codVec2[i]+1 || codVec1.includes(codVec2[i]-1)){
-                output += "#";
+        const codVec1 = this.separarCodigo(codigoSecreto);
+        const codVec2 = this.separarCodigo(codigoIngresado);
+        for(var i = 0;i<codVec1.length;i++){          
+            if(codVec1.includes(codVec2[i]+1) || codVec1.includes(codVec2[i]-1)){
+                output = "#";
             }
         } return output;
     }
