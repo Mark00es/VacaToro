@@ -1,6 +1,3 @@
-import separarCodigo from "./separador"
-import validarCodigo from "./jugadorA"
-
 class vacaToro{
     mensajeFelicidades(){
         return "Felicidades Adivinaste El codigo";
@@ -38,7 +35,7 @@ class vacaToro{
     }    
    
     compararCodigo(codigoSecreto, codigoIngresado){
-        let output = validarCodigo(codigoIngresado)
+        let output = this.validarCodigo(codigoIngresado)
         if(codigoSecreto == codigoIngresado){
             output = this.mensajeFelicidades();
         }
@@ -58,6 +55,13 @@ class vacaToro{
             array.push(valInsert);        
         }
         return array;
+    }
+     
+    validarCodigo(codigo){
+        if(codigo==""){
+            return "Codigo Vacio";    
+        }
+        return codigo;
     }
 }
 export default vacaToro;
