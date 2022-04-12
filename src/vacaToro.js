@@ -40,14 +40,6 @@ class vacaToro{
         }                
         return output;
     }
-
-    unir(cod){
-        let output="";
-        for(var i = 0;i<cod.length;i++){
-            output += cod[i];
-        }
-        return output;
-    }    
    
     compararCodigo(codigoSecreto, codigoIngresado){
         let output = this.validarCodigo(codigoIngresado)
@@ -56,8 +48,6 @@ class vacaToro{
         }
         if(output != "Codigo Vacio" && codigoSecreto!=codigoIngresado){
             output = this.buscarVacaToro(codigoSecreto,codigoIngresado);            
-            if(output != "Codigo imcompatible")                
-                output = this.unir(this.separarCodigo(output).sort()) 
         }
         return output;
     }
