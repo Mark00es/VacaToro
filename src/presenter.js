@@ -1,4 +1,5 @@
 import vacaToro from "./vacaToro";
+import separarCodigo from "./separador";
 
 const numIntentos = document.querySelector("#intentos");
 const codigoSecreto = document.querySelector("#codigo-secreto");
@@ -21,8 +22,11 @@ form2.addEventListener("submit", (event) => {
   const firstNumber = Number.parseInt(intent.value);
   let juego = new vacaToro();
   let resultado = juego.compararCodigo(secreto,firstNumber);
-  div.innerHTML = "<p>" + resultado + " Te quedan: " + intentos-- + " intentos" + "</p>";
+  intentos--
   if(intentos==0){
-    div.innerHTML = "<p>" + "Perdiste el juego por falta de intentos" +" El codigo secreto era: "+ secreto +"</p>";
+    div.innerHTML = "<p>" + "Perdiste el juego por falta de intentos. " +" El codigo secreto era: "+ secreto +"</p>";
+  }
+  else{
+    div.innerHTML = "<p>" + resultado + " Te quedan: " + intentos + " intentos" + "</p>";
   }
 });

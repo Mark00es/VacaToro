@@ -27,17 +27,27 @@ class vacaToro{
         }    
         if(coonf==false){
             output = "Codigo imcompatible";
-        }                  
+        }                
         return output;
     }
 
+    unir(cod){
+        let output="";
+        for(var i = 0;i<cod.length;i++){
+            output += cod[i];
+        }
+        return output;
+    }    
+   
     compararCodigo(codigoSecreto, codigoIngresado){
         let output = recibirCodigo(codigoIngresado)
         if(codigoSecreto == codigoIngresado){
             output = this.mensajeFelicidades();
         }
         if(output != "Codigo Vacio" && codigoSecreto!=codigoIngresado){
-            output = this.buscarVacaToro(codigoSecreto,codigoIngresado);
+            output = this.buscarVacaToro(codigoSecreto,codigoIngresado);            
+            if(output != "Codigo imcompatible")                
+                output = this.unir(separarCodigo(output).sort()) 
         }
         return output;
     }
