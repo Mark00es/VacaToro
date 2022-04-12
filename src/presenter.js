@@ -1,4 +1,5 @@
 import vacaToro from "./vacaToro";
+//import juego from "./game";
 
 const numIntentos = document.querySelector("#intentos");
 const codigoSecreto = document.querySelector("#codigo-secreto");
@@ -11,14 +12,17 @@ let intentos;
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  secreto = Number.parseInt(codigoSecreto.value);
+  secreto = codigoSecreto.value;
   intentos = Number.parseInt(numIntentos.value);
+  if(intentos==[isNaN]){
+    intentos=10;
+  }
   form.reset();
 });
 
 form2.addEventListener("submit", (event) => {
   event.preventDefault();
-  const firstNumber = Number.parseInt(intent.value);
+  const firstNumber = intent.value;
   let juego = new vacaToro();
   let resultado = juego.compararCodigo(secreto,firstNumber);
   intentos--
