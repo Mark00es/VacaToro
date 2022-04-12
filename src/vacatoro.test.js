@@ -1,7 +1,7 @@
 import vacaToro from "./vacaToro"
 
-describe("Codigo Secreto", () => {
-  it("Cuando jugador A ingrese un codigo secreto vacio deberia devolver codigo vacio ", () => {
+describe("Codigo Secreto Ternera", () => {
+  /*it("Cuando jugador A ingrese un codigo secreto vacio deberia devolver codigo vacio ", () => {
     let juego = new vacaToro();
     expect(juego.validarCodigo("")).toEqual("Codigo Vacio");
   });
@@ -65,10 +65,10 @@ describe("Codigo Secreto", () => {
   it("si jugador A ingresa numero 32421  y el B ingresa 987789 deberia retornar 'Codigo imcompatible'", () => {
     let juego = new vacaToro();    
     expect(juego.compararCodigo(32421,987789)).toEqual("Codigo imcompatible");
-  });
-  it("si jugador A ingresa numero a2b1c  y el B ingresa a2b1c deberia retornar 'Felicidades Adivinaste El codigo'", () => {
+  });*/
+  it("si jugador A ingresa numero 1234  y el B ingresa 1235 deberia retornar !!!#", () => {
     let juego = new vacaToro();    
-    expect(juego.compararCodigo('12b1c','a2t1c')).toEqual("!!!");
+    expect(juego.buscarTernera(1234,1235)).toEqual("!!!#");
   });
   
   //si el codigo es 1111 y el jugador b coloca 1123

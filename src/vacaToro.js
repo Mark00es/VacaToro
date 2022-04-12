@@ -2,7 +2,16 @@ class vacaToro{
     mensajeFelicidades(){
         return "Felicidades Adivinaste El codigo";
     }
-    
+    buscarTernera(codigoSecreto,codigoIngresado){    
+        let output="";
+        for(var i = 0;i<codVec1.length;i++){
+            const codVec1 = this.separarCodigo(codigoSecreto);
+            const codVec2 = this.separarCodigo(codigoIngresado);
+            if(codVec1.includes(codVec2[i]+1 || codVec1.includes(codVec2[i]-1)){
+                output += "#";
+            }
+        } return output;
+    }
     buscarVacaToro(codigoSecreto,codigoIngresado){    
         let coonf = false;
         const codVec1 = this.separarCodigo(codigoSecreto);
@@ -51,7 +60,7 @@ class vacaToro{
         let numString = String(codigoSecreto);
         const array = []    
         for(var i = 0;i<numString.length;i++){
-            let valInsert = numString.charAt(i);
+            let valInsert = +numString.charAt(i);
             array.push(valInsert);        
         }
         return array;
