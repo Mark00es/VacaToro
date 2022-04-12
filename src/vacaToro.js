@@ -23,11 +23,16 @@ class vacaToro{
                 output += "!";
                 coonf=true;
             }
-            else{
+            else{                
                 if(codVec1.includes(codVec2[i])){
                     output += "*";
                     coonf=true;
-                }                                    
+                }else{
+                    if(codVec1.includes(codVec2[i]-1) || codVec1.includes(codVec2[i]+1)){
+                        output += "#";   
+                        coonf=true;             
+                    }
+                }                                   
             }    
         }    
         if(coonf==false){
