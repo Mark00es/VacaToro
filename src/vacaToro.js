@@ -1,5 +1,5 @@
 import separarCodigo from "./separador"
-import recibirCodigo from "./jugadorA"
+import validarCodigo from "./jugadorA"
 
 class vacaToro{
     mensajeFelicidades(){
@@ -8,8 +8,8 @@ class vacaToro{
     
     buscarVacaToro(codigoSecreto,codigoIngresado){    
         let coonf = false;
-        const codVec1 = separarCodigo(codigoSecreto);
-        const codVec2 = separarCodigo(codigoIngresado);
+        const codVec1 = this.separarCodigo(codigoSecreto);
+        const codVec2 = this.separarCodigo(codigoIngresado);
         let output="";
         for(var i = 0;i<codVec1.length;i++){
             if(codVec1[i]==codVec2[i]){
@@ -38,16 +38,26 @@ class vacaToro{
     }    
    
     compararCodigo(codigoSecreto, codigoIngresado){
-        let output = recibirCodigo(codigoIngresado)
+        let output = validarCodigo(codigoIngresado)
         if(codigoSecreto == codigoIngresado){
             output = this.mensajeFelicidades();
         }
         if(output != "Codigo Vacio" && codigoSecreto!=codigoIngresado){
             output = this.buscarVacaToro(codigoSecreto,codigoIngresado);            
             if(output != "Codigo imcompatible")                
-                output = this.unir(separarCodigo(output).sort()) 
+                output = this.unir(this.separarCodigo(output).sort()) 
         }
         return output;
+    }
+
+    separarCodigo(codigoSecreto){
+        let numString = String(codigoSecreto);
+        const array = []    
+        for(var i = 0;i<numString.length;i++){
+            let valInsert = numString.charAt(i);
+            array.push(valInsert);        
+        }
+        return array;
     }
 }
 export default vacaToro;
