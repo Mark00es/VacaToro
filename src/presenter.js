@@ -1,5 +1,4 @@
 import vacaToro from "./vacaToro";
-//import juego from "./game";
 
 const numIntentos = document.querySelector("#intentos");
 const codigoSecreto = document.querySelector("#codigo-secreto");
@@ -14,9 +13,6 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
   secreto = codigoSecreto.value;
   intentos = Number.parseInt(numIntentos.value);
-  if(intentos==[isNaN]){
-    intentos=10;
-  }
   form.reset();
 });
 
