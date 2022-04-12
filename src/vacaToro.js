@@ -2,15 +2,8 @@ class vacaToro{
     mensajeFelicidades(){
         return "Felicidades Adivinaste El codigo";
     }
-    buscarTernera(codigoSecreto,codigoIngresado){    
-        let output="";
-        const codVec1 = this.separarCodigo(codigoSecreto);
-        const codVec2 = this.separarCodigo(codigoIngresado);
-        for(var i = 0;i<codVec1.length;i++){          
-            if(codVec1.includes(codVec2[i]+1) || codVec1.includes(codVec2[i]-1)){
-                output = "#";
-            }
-        } return output;
+    buscarTernera1(codigoSecreto,codigoIngresado){    
+        return "#";
     }
     buscarVacaToro(codigoSecreto,codigoIngresado){    
         let coonf = false;
