@@ -68,7 +68,7 @@ describe("Codigo Secreto Ternera", () => {
   });*/
   it("si jugador A ingresa numero 1234  y el B ingresa 1235 deberia retornar #", () => {
     let juego = new vacaToro();    
-    expect(juego.buscarTernera(1234,1235)).toEqual("#");
+    expect(juego.buscarTernera1(1234,1235)).toEqual("#");
   });
   
   //si el codigo es 1111 y el jugador b coloca 1123
