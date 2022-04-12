@@ -2,8 +2,6 @@ import separarCodigo from "./separador"
 import recibirCodigo from "./jugadorA"
 
 class vacaToro{
-    constructor(){        
-    }
     mensajeFelicidades(){
         return "Felicidades Adivinaste El codigo";
     }

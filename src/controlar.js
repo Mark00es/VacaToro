@@ -1,5 +1,4 @@
 import buscarVacaToro from "./vacaToro"
-import separarCodigo from "./separador"
 
 function juegoVacaToro(cod1,cod2,cant){
     let resp;

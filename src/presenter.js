@@ -1,5 +1,4 @@
 import vacaToro from "./vacaToro";
-import separarCodigo from "./separador";
 
 const numIntentos = document.querySelector("#intentos");
 const codigoSecreto = document.querySelector("#codigo-secreto");
